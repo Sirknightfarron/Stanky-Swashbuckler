@@ -19,13 +19,17 @@ public class MapGenerator : MonoBehaviour
     
     [Range(0f, 40f)]
     public int octaves;
-    [Range(0f, 50f)]
+    [Range(0f, 200f)]
     public float persistence;
     [Range(0f, 1000f)]
     public float lacunarity;
 
     public int seed;
     public Vector2 offset;
+    [SerializeField]
+    float highAmplitude;
+    [SerializeField]
+    AnimationCurve animationCurve;
 
     public bool autoUpdate;
 
@@ -33,7 +37,7 @@ public class MapGenerator : MonoBehaviour
 
     public void GenerateMap()
     {
-        float[,] noiseMap = Noise.GenerateNoiseMap(mapWidth, mapHeight, seed, noiseScale, octaves, persistence, lacunarity, offset);
+        float[,] noiseMap = Noise.GenerateNoiseMap(mapWidth, mapHeight, seed, noiseScale, octaves, persistence*0.01f, lacunarity, offset);
 
 
         Color[] colourMap = new Color[mapWidth * mapHeight];
@@ -63,7 +67,7 @@ public class MapGenerator : MonoBehaviour
             display.DrawTexture(TextureGenerator.TextureFromColourMap(colourMap, mapWidth, mapHeight));
         } else if (drawMode == DrawMode.Mesh)
         {
-            display.DrawMesh(MeshGenerator.GenerateTerrainMesh(noiseMap), TextureGenerator.TextureFromColourMap(colourMap, mapWidth, mapHeight));
+            display.DrawMesh(MeshGenerator.GenerateTerrainMesh(noiseMap, highAmplitude, animationCurve), TextureGenerator.TextureFromColourMap(colourMap, mapWidth, mapHeight));
         }
 
     }
@@ -85,6 +89,10 @@ public class MapGenerator : MonoBehaviour
        if(octaves < 0)
         {
             octaves = 0;
+        }
+       if(highAmplitude <= 0)
+        {
+            highAmplitude = 1;
         }
     }
 
