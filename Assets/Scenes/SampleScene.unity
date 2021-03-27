@@ -38,7 +38,11 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+<<<<<<< HEAD
   m_IndirectSpecularColor: {r: 0.2846214, g: 0.37120992, b: 0.498806, a: 1}
+=======
+  m_IndirectSpecularColor: {r: 0.28462112, g: 0.37120947, b: 0.498805, a: 1}
+>>>>>>> main
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -123,6 +127,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1 &1045811763
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,6 +397,9 @@ MonoBehaviour:
     height: 1
     colour: {r: 0.8113208, g: 0.22227941, b: 0.003826994, a: 0}
 --- !u!43 &1153601017
+=======
+--- !u!43 &800215314
+>>>>>>> main
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -555,6 +563,106 @@ Mesh:
     offset: 0
     size: 0
     path: 
+<<<<<<< HEAD
+=======
+--- !u!1 &1112048531
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1112048532}
+  - component: {fileID: 1112048534}
+  - component: {fileID: 1112048533}
+  m_Layer: 0
+  m_Name: MapGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1112048532
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112048531}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 18, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1112048533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112048531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76995e2d118d78b40aec9657c957b475, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textureRender: {fileID: 1261144726}
+  meshFilter: {fileID: 1995782928}
+  meshRenderer: {fileID: 1995782927}
+--- !u!114 &1112048534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112048531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58e507c377992dc4b989be27b2805616, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drawMode: 1
+  mapWidth: 100
+  mapHeight: 100
+  noiseScale: 25
+  octaves: 2
+  persistence: 0.6
+  lacunarity: 1.87
+  seed: 1337
+  offset: {x: 0, y: 66}
+  autoUpdate: 1
+  regions:
+  - name: DeepWater
+    height: 0.3
+    colour: {r: 0.2216981, g: 0.4240421, b: 1, a: 0}
+  - name: Water
+    height: 0.4
+    colour: {r: 0.2688679, g: 0.74387723, b: 1, a: 0}
+  - name: Sand
+    height: 0.51
+    colour: {r: 1, g: 0.7530423, b: 0.33490568, a: 0}
+  - name: Land
+    height: 0.6
+    colour: {r: 0, g: 0.38679248, b: 0.014097259, a: 0}
+  - name: Hill
+    height: 0.7
+    colour: {r: 0.16657984, g: 0.29803923, b: 0.032440357, a: 0}
+  - name: Mountains
+    height: 0.75
+    colour: {r: 0.5566038, g: 0.2932143, b: 0, a: 0}
+  - name: Heights
+    height: 0.9
+    colour: {r: 0.2735849, g: 0.16093925, b: 0.034843363, a: 0}
+  - name: Crater
+    height: 0.95
+    colour: {r: 0.122641504, g: 0.06681173, b: 0.005206477, a: 0}
+  - name: Volcanos
+    height: 1
+    colour: {r: 0.8113208, g: 0.22227941, b: 0.003826994, a: 0}
+>>>>>>> main
 --- !u!1 &1239656379
 GameObject:
   m_ObjectHideFlags: 0
@@ -755,8 +863,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1340741269}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+=======
+  m_LocalPosition: {x: 0, y: 55, z: 0}
+  m_LocalScale: {x: 100, y: 1, z: 100}
+>>>>>>> main
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -871,7 +984,11 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1995782926}
+<<<<<<< HEAD
   m_Mesh: {fileID: 1153601017}
+=======
+  m_Mesh: {fileID: 800215314}
+>>>>>>> main
 --- !u!4 &1995782929
 Transform:
   m_ObjectHideFlags: 0
