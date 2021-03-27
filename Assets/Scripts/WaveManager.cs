@@ -8,9 +8,6 @@ public class WaveManager : MonoBehaviour
     public float _length = 2f;
     public float _speed = 1f;
     public float _offset = 1;
-    [SerializeField]
-
-    public float _wasserlevel = 9;
 
     public static WaveManager instance;
     private void Awake()
@@ -37,7 +34,7 @@ public class WaveManager : MonoBehaviour
     public float GetWaveHight(float _x)
     {
 
-        return (_amplitude * Mathf.Sin((_x / _length) + _offset)) + _wasserlevel;
+        return _amplitude * Mathf.Sin((_x / _length) + _offset);
 
     }
 }
