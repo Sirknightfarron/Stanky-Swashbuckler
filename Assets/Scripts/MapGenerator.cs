@@ -24,6 +24,9 @@ public class MapGenerator : MonoBehaviour
     [Range(0f, 1000f)]
     public float lacunarity;
 
+    public float heightMultiplikator;
+    public AnimationCurve animCurve;
+
     public int seed;
     public Vector2 offset;
 
@@ -63,7 +66,7 @@ public class MapGenerator : MonoBehaviour
             display.DrawTexture(TextureGenerator.TextureFromColourMap(colourMap, mapWidth, mapHeight));
         } else if (drawMode == DrawMode.Mesh)
         {
-            display.DrawMesh(MeshGenerator.GenerateTerrainMesh(noiseMap), TextureGenerator.TextureFromColourMap(colourMap, mapWidth, mapHeight));
+            display.DrawMesh(MeshGenerator.GenerateTerrainMesh(noiseMap, heightMultiplikator, animCurve), TextureGenerator.TextureFromColourMap(colourMap, mapWidth, mapHeight));
         }
 
     }
