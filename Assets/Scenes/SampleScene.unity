@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 1
+  m_Fog: 0
   m_FogColor: {r: 0.65080994, g: 0.666729, b: 0.7075472, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.05
@@ -153,7 +153,7 @@ MeshCollider:
   m_GameObject: {fileID: 1045811763}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -238,6 +238,7 @@ MonoBehaviour:
   _length: 2
   _speed: 1
   _offset: 1
+  _wasserlevel: 0
 --- !u!114 &1045811769
 MonoBehaviour:
   m_ObjectHideFlags: 0

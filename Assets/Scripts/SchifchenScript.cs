@@ -12,10 +12,11 @@ public class SchifchenScript : MonoBehaviour
     Object _Bullet;
     Camera _Camera;
     [SerializeField] 
-    float _speed = 1000f;
+    float _speed = 100f;
     void Awake()
     {
         _Body = GetComponent<Rigidbody>();
+        _Body.transform.SetPositionAndRotation(new Vector3(0, 10f, 0), transform.rotation);
 
         _inputSystem = new InputManager();
         //_inputSystem.Player.Move.performed += ctx => Move(ctx);
@@ -44,7 +45,7 @@ public class SchifchenScript : MonoBehaviour
         {
             _Body.AddForce(transform.right * _Movement.y * _Body.velocity.magnitude);
         }
-        _Body.AddTorque(new Vector3(0, _Movement.x  , 0) *_speed);
+        _Body.AddTorque(new Vector3(0, _Movement.x  , 0) *_speed/4f);
 
 
        
