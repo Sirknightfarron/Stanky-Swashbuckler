@@ -1,5 +1,5 @@
 {
-    "name": "Stanky Swashbuckler",
+    "name": "InputManager",
     "maps": [
         {
             "name": "Player",
@@ -25,6 +25,22 @@
                     "name": "Fire",
                     "type": "Button",
                     "id": "b38a3b50-3f16-490d-9398-2a23f0a17274",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Walk/Run Toggle",
+                    "type": "Button",
+                    "id": "aa0187ba-3cbb-475d-8848-3090d4214b1e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "5ddd8cda-51e3-41b7-af88-363074c14cef",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -248,6 +264,50 @@
                     "processors": "",
                     "groups": "XR",
                     "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ff31931e-9cf0-4aee-be28-1fd9d089deda",
+                    "path": "<Keyboard>/leftShift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Walk/Run Toggle",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "daaf11d7-2425-45b3-85f7-a68b230b035a",
+                    "path": "<Gamepad>/leftStickPress",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Walk/Run Toggle",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b1e8ccc6-1a1f-4a54-a6ec-0d661f8a3dc3",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4fb8d8a2-9e2b-40c7-a0e5-56a8bfa23d06",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
