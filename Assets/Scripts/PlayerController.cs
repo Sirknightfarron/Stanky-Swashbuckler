@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    private enum camView { firstPerson, thirdPerson }
+
     public float turnSpeed = 4.0f;
     public float moveSpeed = 2.0f;
 
@@ -37,4 +39,5 @@ public class PlayerController : MonoBehaviour
 
         transform.Translate(dir * moveSpeed * Time.deltaTime);
     }
+
 }

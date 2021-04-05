@@ -13,7 +13,7 @@ public class MapGenerator : MonoBehaviour
 
     public int mapWidth;
     public int mapHeight;
-    [Range (0f, 50f)]
+    [Range (0f, 500f)]
     public float noiseScale;
 
     
